@@ -27,7 +27,7 @@ function GetPlanets() {
 		fetchPlanets();
 	},[]);
 
-
+ 
 	return (
 		<div>
 

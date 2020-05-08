@@ -12,6 +12,7 @@ class Home extends Component {
 	render() {
 
 		const togglePeoplePlanets = this.state.visible ? "Show People" : "Show Planets";
+		const togglePeoplePlanetstext = this.state.visible ? "See all the planets below" : "See all the people below";
 
 		return (
 			<div>
@@ -19,7 +20,8 @@ class Home extends Component {
 					this.setState({ visible: !this.state.visible });
 				}}>
 					{togglePeoplePlanets}</button>
-				{this.state.visible ? <GetPlanets /> : <GetPeople />}
+				<h3>{togglePeoplePlanetstext}</h3>
+				{this.state.visible ? <GetPlanets /> : <GetPeople />} 
 			</div>
 		)
 	}
