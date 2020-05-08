@@ -1,0 +1,113 @@
+
+
+.App{
+	text-align: center;
+}
+
+nav{
+	display: flex; 
+	justify-content: space-around;
+	align-items: center;
+	min-height: 10vh;
+	background-color: black;
+	text-decoration: none;
+	font-weight: bold; 
+}
+
+.nav-links{
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+}
+
+li{
+	color: white;
+}
+
+/* li:hover{
+	color: yellowgreen;
+} */
+
+.togglePeoplePlanetsButton{
+	margin-top: 2em;
+	color: white;
+	background-color: black;
+	width: 8em;
+	height: 3em;
+	border-radius: 5px;
+	font-size: 1em;
+}
+
+.togglePeoplePlanetsButton:hover{
+	background-color: gray;
+}
+
+.SearchPeoplePlanets{
+	margin-top: 2em;
+	text-align: center;
+	width: 30vw;
+	height: 2em;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.eachCategory{
+	border: 1px solid black;
+	margin: 2em 0 0 35%;
+	width: 30vw ;
+	word-wrap: break-word;
+	border-radius: 5px;
+}
+
+.addFavoriteButton{
+margin-bottom: 1em;
+color: white;
+	background-color: black;
+	width: 8em;
+	height: 2.5em;
+	border-radius: 5px;
+	font-size: 0.7em;
+}
+
+.addFavoriteButton:hover{
+	background-color: gray;
+}
+
+.returnDiv{
+	margin-bottom: 2em;
+}
+
+.favoritesList{
+color: black;
+}
+
+.paginationList{
+	list-style: none;
+	text-align: center;
+	margin-top: 2em;
+	margin-right: 3%
+
+}
+
+.paginationList li {
+	display: inline-block; 
+}
+
+.paginationList li button{
+	background-color: black;
+	color: white;
+	width: 4em;
+	height: 2.5em;
+	border-radius: 5px;
+}
+
+
+.footerDiv{
+	height: 50px;
+	margin-top: 2em;
+	margin-bottom: 0px;
+	background-color: black;
+}
+
