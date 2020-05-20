@@ -36,7 +36,7 @@ const ShowPlanets = ({ planets, loading }) => {
 		<div>
 
 			<input className="SearchPeoplePlanets" type="text" placeholder="Type to search..." value={filter} onChange={(e) => setFilter(e.target.value)} />
-
+			<br/><br/>
 			{planetsplanets}
 
 		</div>

@@ -20,6 +20,7 @@ class Favorites extends Component {
 				}}>
 					{togglePeoplePlanets}</button>
 				{this.state.visible ? <GetFavoritePlanets /> : <GetFavoritePeople />}
+				
 			</div>
 		)
 	}
