@@ -52,7 +52,7 @@ class TodoClassComp extends Component {
   };
 
 
-  componentWillMount() {
+  componentDidMount() {
 	localStorage.getItem("person") && this.setState({
 		list: JSON.parse(localStorage.getItem("person"))
 	})	
@@ -147,7 +147,7 @@ class TodoClassComp extends Component {
                 <p>Name: {item.nameValue} </p>
                 <p>Birth year: {item.birthYearValue} </p>
 				<p>Eye color: {item.eyeColorValue} </p>
-				<p className="customAddedTag">Custom added</p>
+				<p className="customAddedTag">Custom</p>
                 <button
                   className="deleteFavoriteButton"
                   onClick={() => this.deleteItem(item.id)}

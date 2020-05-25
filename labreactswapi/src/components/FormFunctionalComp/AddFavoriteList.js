@@ -1,12 +1,12 @@
 import React from "react";
-import Todo from "./Todo";
+import Person from "./Person";
 
-function AddFavoriteList({ todos, removeTodo }) {
+function AddFavoriteList({ persons, removePerson }) {
   return (
     <div>
       <div>
-        {todos.map((todo) => (
-          <Todo className="todoComp" key={todo.id} todo={todo} removeTodo={removeTodo}/>
+        {persons.map((person) => (
+          <Person key={person.id} person={person} removePerson={removePerson}/>
         ))}
       </div>
     </div>

@@ -14,10 +14,10 @@ const ShowPlanets = ({ planets, loading }) => {
 				planet.eye_color.toLowerCase().match(filter.toLowerCase())
 			) {
 				return <div className="eachCategory" key={planet.name}>
-					<p>Name: {planet.name} </p>
-					<p>Climate: {planet.climate} </p>
-					<p>Terrain: {planet.terrain}</p>
-					<button className="addFavoriteButton">My favorite</button>
+					<p className="eachCategoryName">{planet.name} </p>
+					<p className="eachCategoryYear">{planet.climate} </p>
+					<p className="eachCategoryYear">{planet.terrain}</p>
+					<button className="addFavoriteButtonShowPeople">My favorite</button>
 				</div>
 			}
 			else {
@@ -25,10 +25,10 @@ const ShowPlanets = ({ planets, loading }) => {
 			}
 		}
 		return <div className="eachCategory" key={planet.name}>
-			<p>Name: {planet.name} </p>
-			<p>Climate: {planet.climate} </p>
-			<p>Terrain: {planet.terrain}</p>
-			<button className="addFavoriteButton">My favorite</button>
+			<p className="eachCategoryName">{planet.name} </p>
+					<p className="eachCategoryYear">{planet.climate} </p>
+					<p className="eachCategoryYear">{planet.terrain}</p>
+					<button className="addFavoriteButtonShowPeople">My favorite</button>
 		</div>
 	})
 
@@ -37,6 +37,12 @@ const ShowPlanets = ({ planets, loading }) => {
 
 			<input className="SearchPeoplePlanets" type="text" placeholder="Type to search..." value={filter} onChange={(e) => setFilter(e.target.value)} />
 			<br/><br/>
+			<div className="headers">
+				<p>Planet</p>
+				<p>Climate</p>
+				<p>Terrain</p>
+				<p>Add to favorite</p>
+			</div>
 			{planetsplanets}
 
 		</div>

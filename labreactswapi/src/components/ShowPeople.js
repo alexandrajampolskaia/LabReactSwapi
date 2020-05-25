@@ -25,12 +25,11 @@ const ShowPeople = ({ people, loading }) => {
 				
 				return (
 					<div className="eachCategory" key={person.name}>
-					
-					<p>Name: {person.name} </p>
-					<p>Birth year: {person.birth_year} </p>
-					<p className={person.eye_color}>Eye color: {person.eye_color}</p>
+					<p className="eachCategoryName">{person.name} </p>
+					<p className="eachCategoryYear">{person.birth_year} </p>
+					<p className={person.eye_color}>{person.eye_color}</p>
 					{/* dispatch person to store */}
-					<button className="addFavoriteButton" onClick={handleClick}>My favorite</button> 
+					<button className="addFavoriteButtonShowPeople" onClick={handleClick}>My favorite</button> 
 					
 				</div>
 				)
@@ -43,11 +42,11 @@ const ShowPeople = ({ people, loading }) => {
 		// const handleClick = () => dispatch(actions.addToCart(person))
 				return (
 					<div className="eachCategory" key={person.name}>
-					<p>Name: {person.name} </p>
-					<p>Birth year: {person.birth_year} </p>
-					<p className={person.eye_color}>Eye color: {person.eye_color}</p>
+					<p className="eachCategoryName">{person.name} </p>
+					<p className="eachCategoryYear">{person.birth_year} </p>
+					<p className={person.eye_color}>{person.eye_color}</p>
 					{/* dispatch person to store */}
-					<button className="addFavoriteButton" onClick={handleClick}>My favorite</button> 
+					<button className="addFavoriteButtonShowPeople" onClick={handleClick}>My favorite</button> 
 				</div>
 				)
 	})
@@ -60,6 +59,12 @@ const ShowPeople = ({ people, loading }) => {
 
 			<input className="SearchPeoplePlanets" type="text" placeholder="Type to search..." value={filter} onChange={(e) => setFilter(e.target.value)} />
 			<br/><br/>
+			<div className="headers">
+				<p>Name</p>
+				<p>Birth year</p>
+				<p>Eye color</p>
+				<p>Add to favorite</p>
+			</div>
 			{peoplepeople}
 
 		</div>

@@ -1,91 +1,79 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-// import { Field, reduxForm } from 'redux-form'
+import FadeEffect from '../FadeEffect'
 
 
-function AddFavoriteForm({ addTodo }) {
-	const [toggle, setToggle] = useState(true)
-	const [todo, setTodo] = useState({ id: "", task: "", birth_year: "",  eye_color: "", completed: false });
-	const [errors, setErrors] = useState({ });
-	const [isSubmitting, setIsSubmitting] = useState(false);
-
-
-	function validateForm(todo) {
-		let errors = {}
-		if (!todo.task){
-			errors.task = "(Required)"
-		} else if (todo.task.length < 5) {
-			errors.task = "Please enter minimum 10 characters"
-		}
-		if (!todo.birth_year){
-			errors.birth_year = "(Required)"
-		} else if (todo.birth_year.length < 5) {
-			errors.birth_year = "Must contain letters characters numbers"
-		}
-		if (!todo.eye_color){
-			errors.eye_color = "(Required)"
-		} else if (todo.eye_color.length < 5 ) {
-			errors.eye_color = "Please choose a characters"
-		}
-		return errors;
-	} 
+function AddFavoriteForm({ addPerson }) {
+	const [person, setPerson] = useState({ id: "", name: "", birth_year: "",  eye_color: "", completed: false });
+	const [show, setShow] = useState(false);
+	const [errorMessage, setErrorMessage] = useState("")
+	// const [errorNumber, setErrorNumber] = useState("")
 
 	const handleChange = e => {
-		setTodo({
-			...todo,
+		setPerson({
+			...person,
 			[e.target.name]: e.target.value
 		})
 	}
 
-	const handleSubmit = e => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
-		if(todo.eye_color) {
-			addTodo({ ...todo, id: uuidv4()})
-			setTodo({ ...todo, task: ""}, { ...todo, birth_year: ""}, { ...todo, eye_color: ""})
-		}
-			setErrors(validateForm(todo));
-			setIsSubmitting(true);
-		
+		if(!person.name || !person.birth_year || !person.eye_color) {
+			setErrorMessage("Fill out all fields")
+		} else {
+			setErrorMessage("Successfully added")
+			addPerson({ ...person, id: uuidv4()})
+			setPerson({ ...person, name: ""}, { ...person, birth_year: ""}, { ...person, eye_color: ""})
+		}	
 	}
 
-	useEffect(() => {
-		if (Object.keys(errors).length === 0 && isSubmitting) {			
-			handleSubmit();
-		}
-	}, [errors]);
+	// const handleSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	if(!person.name) {
+	// 		setErrorMessage("Please add name") 
+	// 	} if (person.birth_year !== Number) {
+	// 		setErrorNumber("Must be a number")
+	// 	} if (!person.eye_color) {
+	// 		setErrorMessage("Please add name")
+	// 	} else {
+	// 		setErrorMessage("Successfully added")
+	// 		addPerson({ ...person, id: uuidv4()})
+	// 		setPerson({ ...person, name: ""}, { ...person, birth_year: ""}, { ...person, eye_color: ""})
+	// 	}	
+	// }
 
 	return (
 		<div>
-		{toggle &&
+		<FadeEffect show={show}>
+		<div className="popUpModal">
 		<form className="addFavoriteForm" onSubmit={handleSubmit}>
-		<p className="closeFormX" onClick={() => setToggle(toggle => !toggle)}>X</p>
+		<p className="closeFormX"  onClick={() => setShow(show => !show)}>X</p>
 			<div>
 			<label>Name: </label> 
-			{/* {errors.task && <span>{errors.task}</span>}  */}
 			<br />
-			<input type="text" name="task" value={todo.task} onChange={handleChange}/> 
+			<input type="text" name="name" value={person.name} onChange={handleChange}/> 
 			</div>		
  
 			<div>
 			<label>Birth year: </label> 
-			{/* {errors.birth_year && <span>{errors.birth_year}</span>}  */}
+			{/* <span>{errorNumber}</span> */}
 			<br />
-			<input type="text" name="birth_year" value={todo.birth_year} onChange={handleChange}/>
+			<input type="text" name="birth_year" value={person.birth_year} onChange={handleChange}/>
 			</div>	
 
 			<div>
 			<label>Eye color: </label> 
-			{/* {errors.eye_color && <span>{errors.eye_color}</span>}  */}
 			<br />
-			<input type="text" name="eye_color" value={todo.eye_color} onChange={handleChange}/>	
+			<input type="text" name="eye_color" value={person.eye_color} onChange={handleChange}/>	
 			</div>
 
 			<br/>
 			<button type="submit" className="addFavoriteButton" >Add</button>
+			<div className='broadcast-message'>{errorMessage}</div>
 		</form>
-
-		}
-		{/* onClick={() => { setToggle(toggle => !toggle); handleSubmit()}} */}
+		</div>
+</FadeEffect> 
+		<button className="showAddFavoriteForm" onClick={() => setShow(show => !show)}> add custom</button>
 		</div>
 	)
 }
