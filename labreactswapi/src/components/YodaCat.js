@@ -16,7 +16,7 @@ const [show, setShow] = useState(false);
 
       </div> 
 	</FadeEffect> 
-	<button className="addCustomButtonYodaCustom" onClick={() => setShow(show => !show)}>Yoda</button>
+	<button className="addCustomButtonCustomYoda" onClick={() => setShow(show => !show)}>Yoda</button>
 	</div>
   );
 };

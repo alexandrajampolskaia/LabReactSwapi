@@ -51,7 +51,9 @@ const GetAllFavorites = () => {
   return (
     <div>
       <br />
-      <AddFavoriteForm addCustom={addCustom} />
+	  <div className="deleteFavoriteButtonDiv" >
+	  <AddFavoriteForm addCustom={addCustom} />
+	  </div>
 	  <br />
 	  <p className="headerFavorites"> Favorites </p>
 	  <p className="headersLine" />

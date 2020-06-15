@@ -11,7 +11,7 @@ const ShowPeople = ({ people, loading }) => {
 	}
 
 	const swapiPeople = people.map((person) => {
-		const handleClick = () => dispatch(actions.addToCart(person)
+		const handleClick = () => dispatch(actions.addToFaveList(person)
 		)
 		
 		if (filter.length !== 0) {
@@ -45,7 +45,9 @@ const ShowPeople = ({ people, loading }) => {
 
 	return (
 		<div className="headersAndCategories">
+		<br />
 <p className="searchText">Here you can search amongst our Star Wars people and add your favorites to the favorite list. If you, for any reason, don't find your favorites in our collection you can add your own in the "Favorites" tab. Then you can filter your favorites based on chosen category. Enjoy!</p> 
+<br />
 			<input className="SearchPeoplePlanets" type="text" placeholder="Find your favorite person..." value={filter} onChange={(e) => setFilter(e.target.value)} />
 			
 			<br/><br/>
@@ -53,7 +55,7 @@ const ShowPeople = ({ people, loading }) => {
 				<p>Name</p>
 				<p>Birth year</p>
 				<p>Eye color</p>
-				<p>Add to favorite</p>
+				<p>Favorite</p>
 			</div>
 			{swapiPeople}
 

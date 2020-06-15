@@ -27,7 +27,7 @@ const GetFavoriteMoreOptions = () => {
 		  <p className="AddedTag">From swapi</p> 
 		  <button
 			className="deleteFavoriteButton"
-			onClick={() => dispatch(actions.removeFromCart(item.person.name))}
+			onClick={() => dispatch(actions.removeFromFaveList(item.person.name))}
 		  >
 			✕
 		  </button> </div> 
@@ -43,7 +43,7 @@ const GetFavoriteMoreOptions = () => {
 		  <p className="AddedTag">From swapi</p> 
 		  <button
 			className="deleteFavoriteButton"
-			onClick={() => dispatch(actions.removeFromCart(item.person.name))}
+			onClick={() => dispatch(actions.removeFromFaveList(item.person.name))}
 		  >
 			✕
 		  </button> </div> 
@@ -83,6 +83,7 @@ const GetFavoriteMoreOptions = () => {
 	  <button className="addCustomButton" onClick={() => setShow("custom")}>Show custom</button>
 	  <AddFavoriteForm addCustom={addCustom} />
 	  <YodaCat />
+	  
 	  </div>
 	  <br />
 	  <p className="headerFavorites"> Favorites </p>

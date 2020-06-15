@@ -38,7 +38,7 @@ input, select:focus{
   }
   
   .startPageheader {
-	font-size: 3em;
+	font-size: 2.5em;
 	color: #efc516;
 	background-color: black;
 	animation: type 3s steps(24);
@@ -46,7 +46,7 @@ input, select:focus{
 	white-space: nowrap;
 	border-right: 4px solid #efc516;
 	width: 24ch;
-	margin-bottom: 200px;
+	margin-bottom: 150px;
   }
 
   .startPageButton{
@@ -81,21 +81,12 @@ input, select:focus{
 nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 20vh;
   background-color: black;
   text-decoration: none;
 }
 
-.yodacat {
-	height: 300px;
-	pointer-events: none;
-	position: absolute;
-	margin-left: 30px;
-	background-color: black;
-	border: 2px solid #efc516;
-	padding: 15px 0 10px 0;
-	transition: all 0.7s ease 0s;
-  }
   
 h3{
 	color: white;
@@ -110,7 +101,7 @@ h3{
   color: gray;
   font-size: 1.3em;
   border-bottom: 1px solid black;
-  margin: 0 25px 0 25px;
+  margin: 0 50px 0 25px;
   transition: all 0.7s ease 0s;
 }
 
@@ -148,11 +139,13 @@ h3{
 .SearchPeoplePlanets {
   margin: 2em 0 2em 0;
   text-align: center;
-  width: 40vw;
+  width: 450px;
   height: 3em;
   border-radius: 5px;
 }
+
 .searchText{
+	margin: 0 120px 0 120px;
 	color: white;
 }
 
@@ -271,10 +264,10 @@ color: black;
 /* FORM RELATED */
 
 .addCustomButton{
-	margin-bottom: 0.5em;
+	/* margin-bottom: 0.5em; */
 	font-size: 0.9em;
-	margin-bottom: 15px;
-	margin: 0 10px 0 10px;
+	/* margin-bottom: 15px; */
+	margin: 0 10px 0px 10px;
 	width: 8em;
 	height: 2.5em;
 	
@@ -290,10 +283,10 @@ color: black;
 	color: white
 }
 
-.addCustomButtonYodaCustom{
-	margin-bottom: 0.5em;
+.addCustomButtonCustomYoda{
+	/* margin-bottom: 0.5em; */
 	font-size: 0.9em;
-	margin-bottom: 15px;
+	/* margin-bottom: 15px; */
 	margin: 0 10px 0 10px;
 	width: 8em;
 	height: 2.5em;
@@ -304,13 +297,22 @@ color: black;
   outline: none !important;
   transition: all 0.7s ease 0s;
 }
-.addCustomButtonYodaCustom:hover{
+.addCustomButtonCustomYoda:hover{
 	border-radius: 15px;
 	transition: all 0.7s ease 0s;
 	color: white
 }
 
-
+.yodacat {
+	height: 300px;
+	pointer-events: none;
+	position: absolute;
+	background-color: black;
+	border: 2px solid #efc516;
+	padding: 15px 0 10px 0;
+	transition: all 0.7s ease 0s;
+  } 
+  
 .addFavoriteFormButton {
 	margin-bottom: 0.5em;
 	width: 8em;
@@ -352,7 +354,7 @@ color: black;
 }
 
 .addFavoriteForm {
-  width: auto;
+  width: 420px;
   border: 2px solid gray;
   position: relative;
   list-style: none;
@@ -374,7 +376,7 @@ color: black;
 .addFavoriteForm input {
   margin-top: 1em;
   text-align: center;
-  width: 30vw;
+  width: 410px;
   height: 2em;
   border-radius: 5px;
   border: 1px solid gray;
@@ -385,7 +387,7 @@ color: black;
 	margin-top: 1em;
 	text-align: center;
 	padding-left: 10px;
-	width: 20vw;
+	width: 200px;
 	height: 2.3em;
 	border-radius: 5px;
 	border: 1px solid gray;
@@ -492,24 +494,59 @@ color: black;
 	}
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 660px) {
 	.deleteFavoriteButtonDiv{
-		display: flex;
-		justify-content: center;
+		display: block;
+		margin-top: -20px;
+	  }
+	  .addCustomButton{
+		margin-top: 20px;
+	}
+	  .addCustomButtonCustomYoda{
+		margin-top: 20px;
+	}
+	.SearchPeoplePlanets {
+
+		width: 70vw;
+
 	  }
 
-.addCustomButtonYodaCustom{
-	margin-top: 50px;
-	align-self: center;
-}
-
-	  .addCustomButton{
-		margin-bottom: 0.5em;
-		font-size: 0.9em;
-		margin-bottom: 15px;
-		margin: 0 10px 0 10px;
-		width: 8em;
-		height: 2.5em;
-	
+	  .headers{
+		font-size: 1em;
 	}
+	.searchText{
+		font-size: 0.9em;
+		margin: 0 20px 0 20px;
+	}
+
+	.addFavoriteForm {
+		width: 250px;
+
+	  }
+	  
+	  .addFavoriteForm input {
+		width: 245px;
+	  }
+
+	  .yodacat {
+		height: 210px;
+	  } 
+	  
+	  .eachCategoryInFaves{
+		color: white;
+		font-size: 0.9em;
+	}
+
+	.eachCategory{
+		font-size: 0.9em;
+	}
+
+	.startPageheader {
+		font-size: 1.2em;
+	  }
+	
+	  .startPageButton{
+		margin-bottom:0px;
+	  }
+
 }

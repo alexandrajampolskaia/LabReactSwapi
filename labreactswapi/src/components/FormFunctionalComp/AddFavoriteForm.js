@@ -122,7 +122,7 @@ function AddFavoriteForm({ addCustom }) {
 				}>
 		<p className="closeFormX"  onClick={() => setShow(show => !show)}>X</p>
 			<div>
-			<label>Name: </label> <span className='errorMessage' style={
+			<label>&nbsp;Name: </label> <span className='errorMessage' style={
 						!custom.name.trim(" ") && isNameTouched && custom.name.length < 2 ? { display: "inline" } : { display: "none" }
 						}>{errorMessageNamePerson}</span> 
 			<br />
@@ -130,7 +130,7 @@ function AddFavoriteForm({ addCustom }) {
 			</div>		
  
 			<div>
-			<label>Birth year: </label> <span className='errorMessage' style={
+			<label>&nbsp;Birth year: </label> <span className='errorMessage' style={
 							!custom.yearclimate.trim(" ") && isBirthYearTouched && !(/(?=.*\d)(?=.*[a-zA-Z])/.test(custom.yearclimate)) ? { display: "inline" } : { display: "none" }
 						}>{errorMessageBirthYear}</span> 
 			<br />
@@ -138,7 +138,7 @@ function AddFavoriteForm({ addCustom }) {
 			</div>	
 
 			<div>
-			<label>Eye color: </label> <span className='errorMessage' style={
+			<label>&nbsp;Eye color: </label> <span className='errorMessage' style={
 							!custom.colorterrain.trim(" ") && isEyeColorTouched ? { display: "inline" } : { display: "none" }
 						}>{errorMessageEyeColor}</span> 
 			<br />
@@ -174,7 +174,7 @@ function AddFavoriteForm({ addCustom }) {
 				}>
 		<p className="closeFormX"  onClick={() => setShow(show => !show)}>X</p>
 			<div>
-			<label>Name: </label> <span className='errorMessage' style={
+			<label>&nbsp;Name: </label> <span className='errorMessage' style={
 						!custom.name.trim(" ") && isNameTouched && custom.name.length < 2 ? { display: "inline" } : { display: "none" }
 						}>{errorMessageNamePlanet}</span> 
 			<br />
@@ -182,7 +182,7 @@ function AddFavoriteForm({ addCustom }) {
 			</div>		
  
 			<div>
-			<label>Climate: </label> <span className='errorMessage' style={
+			<label>&nbsp;Climate: </label> <span className='errorMessage' style={
 							!custom.yearclimate.trim(" ") && isBirthYearTouched && custom.yearclimate.length < 2 ? { display: "inline" } : { display: "none" }
 						}>{errorMessageClimate}</span> 
 			<br />
@@ -190,7 +190,7 @@ function AddFavoriteForm({ addCustom }) {
 			</div>	
 
 			<div>
-			<label>Terrain: </label> <span className='errorMessage' style={
+			<label>&nbsp;Terrain: </label> <span className='errorMessage' style={
 							!custom.colorterrain.trim(" ") && isEyeColorTouched && custom.colorterrain.length < 2 ? { display: "inline" } : { display: "none" }
 						}>{errorMessageTerrain}</span> 
 			<br />
@@ -205,7 +205,7 @@ function AddFavoriteForm({ addCustom }) {
 		
 		</div>
 </FadeEffect> 
-		<button className="addCustomButtonYodaCustom" onClick={() => setShow(show => !show)}> add custom</button>
+		<button className="addCustomButtonCustomYoda" onClick={() => setShow(show => !show)}> Add custom</button>
 		</div>
 	)
 }

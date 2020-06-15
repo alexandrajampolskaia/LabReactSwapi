@@ -1,24 +1,23 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
 
-//add to cart, remove from cart
-const addToCart = createAction("add to cart");
-const removeFromCart = createAction("remove to cart");
+const addToFaveList = createAction("add to cart");
+const removeFromFaveList = createAction("remove to cart");
 
-const actions = { addToCart, removeFromCart };
+const actions = { addToFaveList, removeFromFaveList };
 
 const initialState = [];
 
 const reducer = createReducer(initialState, {
-  [addToCart]: (state, action) => {
+  [addToFaveList]: (state, action) => {
     let found = state.find(
-      (cartItem) => cartItem.person.name === action.payload.name
+      (listItem) => listItem.person.name === action.payload.name
     );
     if (found) {
-      return state.map((cartItem) => {
-        if (cartItem.person.name === action.payload.name) {
-          return { ...cartItem };
+      return state.map((listItem) => {
+        if (listItem.person.name === action.payload.name) {
+          return { ...listItem };
         } else {
-          return cartItem;
+          return listItem;
         }
       });
     } else {
@@ -26,8 +25,8 @@ const reducer = createReducer(initialState, {
     }
   },
 
-  [removeFromCart]: (state, action) => (
-	  state.filter(cartItem => cartItem.person.name !== action.payload)
+  [removeFromFaveList]: (state, action) => (
+	  state.filter(listItem => listItem.person.name !== action.payload)
   )
 });
 
