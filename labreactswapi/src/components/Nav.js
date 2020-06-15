@@ -6,8 +6,8 @@ function Nav() {
 	return (
 		<nav>
 			<ul className="nav-links">
-				<Link style={{textDecoration:"none"}} to="/home"> <li>Home</li> </Link>
-				<Link style={{textDecoration:"none"}} to="/favorites"> <li>Favorites</li> </Link>
+				<Link style={{textDecoration:"none"}} to="/home"> <li className="navLi">Home</li> </Link>
+				<Link style={{textDecoration:"none"}} to="/favorites"> <li className="navLi">Favorites</li> </Link>
 			</ul>
 		</nav>
 	)

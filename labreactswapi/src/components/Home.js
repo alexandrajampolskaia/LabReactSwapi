@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css';
-import GetPeople from './GetPeople';
-import GetPlanets from './GetPlanets';
+import GetPeopleAPI from './GetPeopleAPI';
+import GetPlanetsAPI from './GetPlanetsAPI';
 
 class Home extends Component {
 
@@ -21,7 +21,7 @@ class Home extends Component {
 				}}>
 					{togglePeoplePlanets}</button>
 				{/* <h3>{togglePeoplePlanetstext}</h3> */}
-				{this.state.visible ? <GetPlanets /> : <GetPeople />} 
+				{this.state.visible ? <GetPlanetsAPI /> : <GetPeopleAPI />} 
 			</div>
 		)
 	}

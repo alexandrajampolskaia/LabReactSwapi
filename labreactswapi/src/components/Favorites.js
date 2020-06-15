@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css';
-import GetFavoritePeople from './GetFavoritePeople';
-import GetFavoritePlanets from './GetFavoritePlanets';
+import GetFavoriteMoreOptions from './GetFavoriteMoreOptions';
+import GetAllFavorites from './GetAllFavorites';
 
 class Favorites extends Component {
 
@@ -11,7 +11,7 @@ class Favorites extends Component {
 
 	render() {
 
-		const togglePeoplePlanets = this.state.visible ? "Show People" : "Show Planets";
+		const togglePeoplePlanets = this.state.visible ? "Show All" : "More options";
 
 		return (
 			<div>
@@ -19,7 +19,7 @@ class Favorites extends Component {
 					this.setState({ visible: !this.state.visible });
 				}}>
 					{togglePeoplePlanets}</button>
-				{this.state.visible ? <GetFavoritePlanets /> : <GetFavoritePeople />}
+				{this.state.visible ?  <GetFavoriteMoreOptions /> : <GetAllFavorites /> }
 				
 			</div>
 		)

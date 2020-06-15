@@ -6,11 +6,7 @@ const removeFromCart = createAction("remove to cart");
 
 const actions = { addToCart, removeFromCart };
 
-const initialState = [
-  // {
-  // 	person: { name: 'Alex', birth_year: '1988', eye_color: 'blue' },
-  // }
-];
+const initialState = [];
 
 const reducer = createReducer(initialState, {
   [addToCart]: (state, action) => {
@@ -18,9 +14,6 @@ const reducer = createReducer(initialState, {
       (cartItem) => cartItem.person.name === action.payload.name
     );
     if (found) {
-      // return state.map(cartItem =>
-      // 	(cartItem.person.name === action.payload.name) ? {...cartItem } : cartItem )
-
       return state.map((cartItem) => {
         if (cartItem.person.name === action.payload.name) {
           return { ...cartItem };
@@ -28,7 +21,6 @@ const reducer = createReducer(initialState, {
           return cartItem;
         }
       });
-      //if kan även lämnas helt tomt för att funka
     } else {
       return [...state, { person: action.payload }];
     }
@@ -37,8 +29,6 @@ const reducer = createReducer(initialState, {
   [removeFromCart]: (state, action) => (
 	  state.filter(cartItem => cartItem.person.name !== action.payload)
   )
-
-  //   [removeFromCart]: (state, {payload}) => [...state, { todos: state.todos.filter((todo) => todo.id !== payload )}],
 });
 
 export { actions, reducer };

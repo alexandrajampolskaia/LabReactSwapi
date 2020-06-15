@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ShowPlanets from './ShowPlanets'
 
-// GET PEOPLE FOR LOOP
-function GetPlanets() {
+// GET PLANETS FOR LOOP
+function GetPlanetsAPI() {
 	const [planets, setPlanets] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -36,4 +36,4 @@ function GetPlanets() {
 		</div>
 	);
 }
-export default GetPlanets;
+export default GetPlanetsAPI;

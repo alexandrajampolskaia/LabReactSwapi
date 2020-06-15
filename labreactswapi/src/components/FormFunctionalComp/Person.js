@@ -1,23 +1,24 @@
 import React from "react";
 
-function Person({ person, removePerson }) {
+function Person({ custom, removeCustom }) {
 
 	function handleRemoveClick() {
-		removePerson(person.id)
+		removeCustom(custom.id)
 	}
 	
   return (
 
-    <div className="eachCategoryCustomAdd" >
-      <p>Name: {person.name}</p>
-	  <p>Birth year: {person.birth_year}</p>
-	  <p>Eye color: {person.eye_color}</p>
-	  <p>Custom added</p>
+	<div className="headersAndCategoriesFave">
+		 <div className="eachCategoryInFaves" >
+      <p>{custom.name}</p>
+	  <p>{custom.yearclimate}</p>
+	  <p>{custom.colorterrain}</p>
+	  <p className="AddedTag">Custom added</p>
 
-      <button className="deleteFavoriteButton" onClick={handleRemoveClick}>Delete</button>
+      <button className="deleteFavoriteButton" onClick={handleRemoveClick}>✕</button>
 
     </div>
-
+	</div>
   );
 }
 

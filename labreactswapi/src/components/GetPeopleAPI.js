@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ShowPeople from './ShowPeople'
 
 // GET PEOPLE FOR LOOP
-function GetPeople() {
+function GetPeopleAPI() {
 	const [people, setPeople] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -36,4 +36,4 @@ function GetPeople() {
 		</div>
 	);
 }
-export default GetPeople;
+export default GetPeopleAPI;

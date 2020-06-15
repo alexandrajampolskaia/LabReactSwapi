@@ -1,12 +1,12 @@
 import React from "react";
 import Person from "./Person";
 
-function AddFavoriteList({ persons, removePerson }) {
+function AddFavoriteList({ customMade, removeCustom }) {
   return (
     <div>
       <div>
-        {persons.map((person) => (
-          <Person key={person.id} person={person} removePerson={removePerson}/>
+        {customMade.map((custom) => (
+          <Person key={custom.id} custom={custom} removeCustom={removeCustom}/>
         ))}
       </div>
     </div>

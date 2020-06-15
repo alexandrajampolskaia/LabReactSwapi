@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Favorites from './components/Favorites';
 // import Footer from './components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import StartPage from "./components/StartPage";
 
 
 function App() {
@@ -12,12 +13,14 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
+			<StartPage />
 			<Nav />
 				<Switch>
 				<Route path="/" exact component={Home} /> 
 				<Route path="/home" component={Home} />
 				<Route path="/favorites" component={Favorites} />
 				</Switch>
+
 				{/* <Footer /> */}
 			</div>
 			
