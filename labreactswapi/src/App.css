@@ -116,7 +116,7 @@ h3{
 
 /* BIG TOGGLE BUTTON */
 .togglePeoplePlanetsButton {
-  margin: 0 0 1em 0;
+  margin: 0 0.5em 1em 0.5em;
   width: 8em;
   height: 3em;
   font-size: 1.2em;
@@ -512,7 +512,7 @@ color: black;
 	  }
 
 	  .headers{
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 	.searchText{
 		font-size: 0.9em;
@@ -535,6 +535,7 @@ color: black;
 	  .eachCategoryInFaves{
 		color: white;
 		font-size: 0.9em;
+		grid-gap: 7px;
 	}
 
 	.eachCategory{
@@ -547,6 +548,12 @@ color: black;
 	
 	  .startPageButton{
 		margin-bottom:0px;
+	  }
+
+	  .togglePeoplePlanetsButton {
+		margin: 0 0.3em 1em 0.3em;
+		font-size: 1em;
+
 	  }
 
 }
