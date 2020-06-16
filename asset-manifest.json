@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/LabReactSwapi/static/css/main.41d81db5.chunk.css",
+    "main.css": "/LabReactSwapi/static/css/main.e05b9823.chunk.css",
     "main.js": "/LabReactSwapi/static/js/main.1e42cc68.chunk.js",
     "main.js.map": "/LabReactSwapi/static/js/main.1e42cc68.chunk.js.map",
     "runtime-main.js": "/LabReactSwapi/static/js/runtime-main.97bd2a1b.js",
@@ -8,16 +8,16 @@
     "static/js/2.d7e50a0c.chunk.js": "/LabReactSwapi/static/js/2.d7e50a0c.chunk.js",
     "static/js/2.d7e50a0c.chunk.js.map": "/LabReactSwapi/static/js/2.d7e50a0c.chunk.js.map",
     "index.html": "/LabReactSwapi/index.html",
-    "precache-manifest.7581ede8131a2785b16894b09c8f7364.js": "/LabReactSwapi/precache-manifest.7581ede8131a2785b16894b09c8f7364.js",
+    "precache-manifest.fe96f289a005dd8fbd03753ec4802bf8.js": "/LabReactSwapi/precache-manifest.fe96f289a005dd8fbd03753ec4802bf8.js",
     "service-worker.js": "/LabReactSwapi/service-worker.js",
-    "static/css/main.41d81db5.chunk.css.map": "/LabReactSwapi/static/css/main.41d81db5.chunk.css.map",
+    "static/css/main.e05b9823.chunk.css.map": "/LabReactSwapi/static/css/main.e05b9823.chunk.css.map",
     "static/js/2.d7e50a0c.chunk.js.LICENSE.txt": "/LabReactSwapi/static/js/2.d7e50a0c.chunk.js.LICENSE.txt",
     "static/media/yodacat.png": "/LabReactSwapi/static/media/yodacat.36486e5d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.97bd2a1b.js",
     "static/js/2.d7e50a0c.chunk.js",
-    "static/css/main.41d81db5.chunk.css",
+    "static/css/main.e05b9823.chunk.css",
     "static/js/main.1e42cc68.chunk.js"
   ]
 }
