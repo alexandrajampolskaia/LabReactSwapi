@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/LabReactSwapi/static/css/main.292735c0.chunk.css",
-    "main.js": "/LabReactSwapi/static/js/main.1e42cc68.chunk.js",
-    "main.js.map": "/LabReactSwapi/static/js/main.1e42cc68.chunk.js.map",
+    "main.css": "/LabReactSwapi/static/css/main.e05b9823.chunk.css",
+    "main.js": "/LabReactSwapi/static/js/main.34490102.chunk.js",
+    "main.js.map": "/LabReactSwapi/static/js/main.34490102.chunk.js.map",
     "runtime-main.js": "/LabReactSwapi/static/js/runtime-main.97bd2a1b.js",
     "runtime-main.js.map": "/LabReactSwapi/static/js/runtime-main.97bd2a1b.js.map",
     "static/js/2.d7e50a0c.chunk.js": "/LabReactSwapi/static/js/2.d7e50a0c.chunk.js",
     "static/js/2.d7e50a0c.chunk.js.map": "/LabReactSwapi/static/js/2.d7e50a0c.chunk.js.map",
     "index.html": "/LabReactSwapi/index.html",
-    "precache-manifest.ad9cf94619eca9a85a65057e9eddf326.js": "/LabReactSwapi/precache-manifest.ad9cf94619eca9a85a65057e9eddf326.js",
+    "precache-manifest.ba668edf91c151a6045f27755922dfec.js": "/LabReactSwapi/precache-manifest.ba668edf91c151a6045f27755922dfec.js",
     "service-worker.js": "/LabReactSwapi/service-worker.js",
-    "static/css/main.292735c0.chunk.css.map": "/LabReactSwapi/static/css/main.292735c0.chunk.css.map",
+    "static/css/main.e05b9823.chunk.css.map": "/LabReactSwapi/static/css/main.e05b9823.chunk.css.map",
     "static/js/2.d7e50a0c.chunk.js.LICENSE.txt": "/LabReactSwapi/static/js/2.d7e50a0c.chunk.js.LICENSE.txt",
     "static/media/yodacat.png": "/LabReactSwapi/static/media/yodacat.36486e5d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.97bd2a1b.js",
     "static/js/2.d7e50a0c.chunk.js",
-    "static/css/main.292735c0.chunk.css",
-    "static/js/main.1e42cc68.chunk.js"
+    "static/css/main.e05b9823.chunk.css",
+    "static/js/main.34490102.chunk.js"
   ]
 }
